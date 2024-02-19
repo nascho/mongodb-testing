@@ -1,7 +1,11 @@
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
+
+const uri = process.env.URI;
+
+
 let dbConnection;
-const uri = 'mongodb+srv://nchoudhury1:hiLwXJHhflrxn0QJ@cluster0.fwlyz9r.mongodb.net/?retryWrites=true&w=majority'
 
 module.exports = {
     connectToDb: (cb) => {
